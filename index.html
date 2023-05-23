@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>To Do Website</title>
 </head>
 <body>
     <h1>Your To Do List:</h1>
-
-    <ol></ol>
+    <form action="/action.php" method="post">
+        To Do: <input name="todo" type="text" /> <br /> 
+        <input checked="checked" name="priority" type="radio" value="high" /> High Priority <input name="priority" type="radio" value="normal" /> Normal<br />
+        <textarea cols="20" name="notes" rows="5">Additional details here</textarea><br />
+      <input type="submit" value="Submit" />
+      </form>
+      <ol class="tasks" id="highPriorityTasks"></ol>
+      <ol class="tasks" id="normalPriorityTasks"></ol>
 
     <script src="./framework.js"></script>
 </body>
